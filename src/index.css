@@ -10,3 +10,147 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+header h1 {
+  text-align: center;
+}
+
+header ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header li {
+  margin: auto;
+  padding: 0;
+}
+
+header a {
+  color: blue;
+  text-align: center;
+  text-decoration: none;
+}
+
+#chooseTitle {
+  text-align: center;
+}
+
+.view h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+}
+
+.view ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.view li {
+  margin: 0;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ships li {
+  color: red;
+}
+
+.deleteButton {
+  color: red;
+  display: block;
+  text-align: center;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.addShip h1 {
+  text-align: center;
+}
+
+.shipInput {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.shipInput input {
+  text-align: center;
+  width: 600px;
+  margin: auto;
+}
+
+.shipInput button {
+  width: 150px;
+  margin: auto;
+}
+
+.addPerson h1 {
+  text-align: center;
+}
+
+.personInput {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.personInput input {
+  text-align: center;
+  width: 600px;
+  margin: auto;
+}
+
+.personInput button {
+  width: 150px;
+  margin: auto;
+}
+
+.addDisplay {
+}
+
+.addDisplay h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+}
+
+.addDisplay ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.addDisplay li {
+  margin: 0;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.addDisplay li {
+  color: red;
+}
+
+.selectButton {
+  color: red;
+  display: block;
+  text-align: center;
+  width: 150px;
+  margin: 0 auto;
+}

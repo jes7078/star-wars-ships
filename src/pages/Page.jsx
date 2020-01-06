@@ -44,13 +44,13 @@ const Page = () => {
     createPersonList()
   }
   return (
-    <section>
+    <section className="view">
       <h1>View and Delete Persons or Ships</h1>
       <h1>Ships</h1>
       <ul>
         {shipList.map((ship, index) => {
           return (
-            <section key={index}>
+            <section className="ships" key={index}>
               <li>{ship.transportName}</li>
 
               <button

@@ -160,32 +160,35 @@ const Page2 = () => {
 
   return (
     <section>
-      <section>
+      <section className="addShip">
         <h1>Add or Update a Ship or Person</h1>
         {/* ----------------Ship Input Section---------------------------- */}
-        <label>Ship Name</label>
-        <input
-          className="inputBar"
-          type="text"
-          value={shipName}
-          placeholder="Enter Ship Name"
-          onChange={enterShipName}
-        ></input>
-        <label>Ship Speed</label>
-        <input
-          className="inputBar"
-          type="text"
-          value={shipSpeed}
-          placeholder="Enter Ship Speed"
-          onChange={enterShipSpeed}
-        ></input>
-        <button onClick={addShip}>Add Ship</button>
-        <button onClick={updateShip}>Update Ship</button>
+        <section className="shipInput">
+          <label>Ship Name</label>
+          <input
+            className="inputBar"
+            type="text"
+            value={shipName}
+            placeholder="Enter Ship Name"
+            onChange={enterShipName}
+          ></input>
+          <label>Ship Speed</label>
+          <input
+            className="inputBar"
+            type="text"
+            value={shipSpeed}
+            placeholder="Enter Ship Speed"
+            onChange={enterShipSpeed}
+          ></input>
+          <button onClick={addShip}>Add Ship</button>
+          <button onClick={updateShip}>Update Ship</button>
+        </section>
       </section>
-      <section>
-        {/* ----------------Person Input Section---------------------------- */}
+
+      {/* ----------------Person Input Section---------------------------- */}
+      <section className="addPerson">
         <h1>Person</h1>
-        <section>
+        <section className="personInput">
           <label>Person's Name</label>
           <input
             className="inputBar"
@@ -222,7 +225,7 @@ const Page2 = () => {
           <button onClick={updatePerson}>Update Person</button>
         </section>
         {/* ----------------Ship Display Section---------------------------- */}
-        <section>
+        <section className="addDisplay">
           <h1>Ship List</h1>
           <ul>
             {shipList.map((ship, index) => {
@@ -244,23 +247,25 @@ const Page2 = () => {
           </ul>
           {/* ----------------Person Display Section---------------------------- */}
         </section>
-        <h1>People List</h1>
-        <ul>
-          {personList.map((person, index) => {
-            return (
-              <section key={index}>
-                <li>{person.name}</li>
-                <button
-                  className="selectButton"
-                  value={person.id}
-                  onClick={() => selectPerson(person.id)}
-                >
-                  Select for Update
-                </button>
-              </section>
-            )
-          })}
-        </ul>
+        <section className="addDisplay">
+          <h1>People List</h1>
+          <ul>
+            {personList.map((person, index) => {
+              return (
+                <section key={index}>
+                  <li>{person.name}</li>
+                  <button
+                    className="selectButton"
+                    value={person.id}
+                    onClick={() => selectPerson(person.id)}
+                  >
+                    Select for Update
+                  </button>
+                </section>
+              )
+            })}
+          </ul>
+        </section>
       </section>
     </section>
   )
