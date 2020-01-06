@@ -106,6 +106,20 @@ const Page2 = () => {
     createShipList()
   }
 
+  const addShip = async () => {
+    let ship = {
+      transportName: shipName,
+      speed: shipSpeed,
+    }
+    const resp = await axios.post('https://localhost:5001/api/Transport/', ship)
+    if (resp.statusText === 'OK') {
+      window.alert('Ship Added')
+    } else {
+      window.alert('Error, Ship Not Added')
+    }
+    createShipList()
+  }
+
   const updatePerson = async () => {
     let person = {
       id: personId,
@@ -122,6 +136,22 @@ const Page2 = () => {
     )
     if (resp.statusText === 'OK') {
       window.alert('Person updated')
+    } else {
+      window.alert('Error, Person Not updated')
+    }
+    createPersonList()
+  }
+
+  const addPerson = async () => {
+    let person = {
+      name: personName,
+      force: personForce,
+      primaryWeapon: personPrimaryWeapon,
+      transportName: personTransportName,
+    }
+    const resp = await axios.post('https://localhost:5001/api/Person/', person)
+    if (resp.statusText === 'OK') {
+      window.alert('Person added')
     } else {
       window.alert('Error, Person Not updated')
     }
@@ -149,7 +179,7 @@ const Page2 = () => {
           placeholder="Enter Ship Speed"
           onChange={enterShipSpeed}
         ></input>
-        <button>Add Ship</button>
+        <button onClick={addShip}>Add Ship</button>
         <button onClick={updateShip}>Update Ship</button>
       </section>
       <section>
@@ -188,7 +218,7 @@ const Page2 = () => {
             placeholder="Enter Person's Transport Name"
             onChange={enterPersonTransportName}
           ></input>
-          <button>Add Person</button>
+          <button onClick={addPerson}>Add Person</button>
           <button onClick={updatePerson}>Update Person</button>
         </section>
         {/* ----------------Ship Display Section---------------------------- */}
